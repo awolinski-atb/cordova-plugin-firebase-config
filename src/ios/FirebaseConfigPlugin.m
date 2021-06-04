@@ -3,7 +3,14 @@
 
 @implementation FirebaseConfigPlugin
 
+static FirebaseConfigPlugin* firebaseConfigPlugin;
+
++ (FirebaseConfigPlugin) firebaseConfigPlugin {
+    return firebaseConfigPlugin;
+}
+
 - (void)pluginInitialize {
+    firebaseConfigPlugin = self;
     NSLog(@"Starting Firebase Remote Config plugin");
 
     self.remoteConfig = [FIRRemoteConfig remoteConfig];
