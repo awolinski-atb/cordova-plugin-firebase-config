@@ -2,7 +2,6 @@
 @import Firebase;
 
 @interface FirebaseConfigPlugin : CDVPlugin
-    + (FirebaseConfigPlugin) firebaseConfigPlugin;
     - (void)fetch:(CDVInvokedUrlCommand*)command;
     - (void)activate:(CDVInvokedUrlCommand*)command;
     - (void)fetchAndActivate:(CDVInvokedUrlCommand*)command;
